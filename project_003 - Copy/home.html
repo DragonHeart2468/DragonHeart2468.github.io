@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Souls-like</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML, CSS, JS, practice, project">
+  <meta name="description" content="This is my practice on html, css,
+  and js">
+  <meta name="author" content="Rudeni">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- navbar -->
+  <div class="navbar">
+    <!-- steam -->
+    <a href="https://store.steampowered.com/">
+      <img src="asset/steam_logo.png" style="width: 50px; height: 50px;">
+    </a>
+    <a href="https://store.steampowered.com/" style="position: relative; left: 10px;">Steam</a>
+    <!-- search bar -->
+    <div class="search-container" style="margin-left: 200px;">
+      <input type="text" id="searchInput" class="searchbar" placeholder="Search...">
+      <button id="searchButton" class="search-button">
+        <img id="iconMode" src="asset/search_icon_dark.png" style="width: 20px; height: 20px; transition: opacity 0.2s ease;">
+      </button>
+    </div>
+    <!-- mode button -->
+    <img id="image-transition" class="toggle-image" src="asset/moon_dark_mode.jpg" alt="Toggle Mode"
+    onclick="toggleMode();" style="width: 60px; height: 60px; margin-left: 200px;">
+    <!-- music button -->
+    <img id="play-pause-image" class="toggle-music" src="asset/music_muted_icon_dark.png" alt="Play/Pause"
+    style="width: 70px; height: 70px; margin-left: 200px;">
+    <audio id="audio" src="asset/malenia_first_phase_theme.mp3" loop></audio>
+    <!-- sidebar -->
+    <div class="container"  style="margin-left: 200px;">
+      <button class="toggle-btn">☰</button>
+      <aside class="sidebar" id="sidebar">
+        <div style="margin-top: 80px;">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="sidebar-mode">━━━━━━━━━━━━━</li>
+            <li><a href="main_menu.html">Main Menu</a></li>
+            <li class="sidebar-mode">━━━━━━━━━━━━━</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <video class="video-background" autoplay loop muted>
+    <source src="asset/home_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="content-container fade-in">
+    <div id="searchableContent" class="blurred-text-container">
+      <h1>Forge Your Fate</h1>
+      <p>Explore the unforgiving world of souls-like games,<br>
+      where every encounter tests your resolve</p>
+      <button onclick="window.location.href='main_menu.html'" class="my-button">Start Quest</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
