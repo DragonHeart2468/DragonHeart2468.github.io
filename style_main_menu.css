@@ -1,0 +1,11 @@
+.img-cover {
+  transition: opacity 0.3s ease;
+}
+
+.img-cover.img-cover:hover {
+  opacity: 0.7;
+}
+
+#nextButton:hover {
+  transform: scale(1.5); /* Slight zoom effect on hover */
+}

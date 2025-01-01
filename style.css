@@ -1,0 +1,292 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: black;
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  z-index: 1000; /* Ensure navbar is on top */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: background-color 1s ease;
+  transition: box-shadow 1s ease;
+}
+
+.light-mode .navbar {
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: background-color 1s ease;
+  transition: box-shadow 1s ease;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 1s ease;
+}
+
+.light-mode .navbar a {
+  color: black;
+  transition: color 1s ease;
+}
+
+.navbar a:hover {
+  color: gray;
+}
+
+.navbar-margin {
+  margin-left: 300px;
+}
+
+.toggle-image {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.toggle-music {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.fade {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.toggle-image:hover {
+  transform: scale(1.5); /* Slight zoom effect on hover */
+}
+
+.toggle-music:hover {
+  transform: scale(1.5); /* Slight zoom effect on hover */
+}
+
+.video-background {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100%; /* Ensure it takes up full screen */
+}
+
+/* The container for the blurred text */
+.blurred-text-container {
+  position: relative;
+  top: -40px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  color: white;
+  font-size: 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: color 1s ease;
+  transition: box-shadow 1s ease;
+  transition: background-color 1s ease;
+}
+
+.light-mode .blurred-text-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);  
+  transition: color 1s ease;
+  transition: box-shadow 1s ease;
+  transition: background-color 1s ease;
+}
+
+.my-button {
+  padding: 15px 30px; /* Adds space inside the button */
+  background-color: black; /* Button background color */
+  color: white; /* Text color */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  border: none; /* Removes border */
+  border-radius: 10px; /* Rounds the corners of the button */
+  font-size: 30px; /* Font size for the text */
+  cursor: pointer; /* Changes the cursor when hovering */
+  transition: background-color 1s ease; /* Smooth transition for background color */
+}
+
+.light-mode .my-button {
+  background-color: white; /* Button background color */
+  color: black; /* Text color */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: background-color 1s ease;
+}
+
+.my-button:hover {
+  background-color: white; /* Darker background color on hover */
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: color 1s ease;
+}
+
+.light-mode .my-button:hover {
+  background-color: black; /* Darker background color on hover */
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: color 1s ease;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  max-width: 400px; /* Adjust as needed */
+  border-radius: 20px; /* Rounded edges */
+  overflow: hidden; /* Prevents overflow */
+  background-color: transparent;
+}
+
+.searchbar {
+  flex: 1; /* Takes available space */
+  padding: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-radius: 20px 0 0 20px; /* Rounded left edges */
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  outline: none; /* Removes default outline */
+  transition: background-color 0.5s ease;
+}
+
+.light-mode .searchbar {
+  color: white;
+  background-color: black;
+  transition: background-color 0.5s ease;
+}
+
+.search-button {
+  background-color: white;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  padding-top: 7.4px;
+  padding-bottom: 11px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0; /* Rounded right edges */
+  transition: background-color 0.5s ease;
+}
+
+.light-mode .search-button {
+  background-color: black;
+  color: white;
+  transition: background-color 0.5s ease;
+}
+
+.search-button:hover {
+  background-color: lightgray; /* Darker on hover */
+}
+
+.highlight {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+}
+
+.toggle-btn {
+  font-size: 40px;
+  background-color: transparent; /* Button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: color 2s ease;
+}
+
+.light-mode .toggle-btn {
+  background-color: transparent;
+  color: black;
+  transition: color 2s ease;
+}
+
+.sidebar {
+  width: 200px; /* Set the width of the sidebar */
+  background-color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  top: 0;
+  right: 0;
+  padding: 15px;
+  padding-bottom: 100%;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); /* Initially hidden */
+  position: absolute; /* Allows sidebar to overlay */
+  height: 100%;
+  z-index: 1; /* Ensures it appears above other content */
+}
+
+.light-mode .sidebar {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+.sidebar-mode {
+  color: white;
+  transition: color 1.5s ease;
+}
+
+.light-mode .sidebar-mode {
+  color: black;
+  transition: color 1.5s ease;
+}
+
+.sidebar.active {
+  transform: translateX(0); /* Show sidebar */
+}
+
+.sidebar h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+  /* padding: 10px 0; */
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.fade-in {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 2s ease; /* Transition effect */
+}
+
+.fade-in.visible {
+  opacity: 1; /* Fully visible */
+}
